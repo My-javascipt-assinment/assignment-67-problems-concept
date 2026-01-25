@@ -1,62 +1,137 @@
 /*==================================== Question No 1 =========================================
+new Map( ) 
+new Map( ) is a method to store data in an object 
+======================================= Answer =====================================*/
+/* const obj = new Map();
+obj.set('name','Aziz');
+obj.set('age',23);
+obj.set('designation','developer');
+obj.set('city','karachi')
+console.log(obj.get('age'))
+console.log(obj.has('city'))
+obj.delete('name');
+console.log(obj.size)
+console.log(obj)
+console.log(obj.keys());
+console.log(obj.values());
 
+for(let[k,val] of obj){
+    console.log(`${k}  ${val}`)
+}
+ */
+
+
+/*==================================== Question No 2 =========================================
+real use of new Map()
+======================================= Answer =====================================*/
+/* const userSession = new Map();
+userSession.set(100,{name:'Ali',role : 'developer'});
+userSession.set(101,{name :'Ijaz',role:'developer'});
+
+console.log(userSession.get(101))
+if(userSession.has(101)){
+    console.log('user already logged in')
+}
+ */
+
+/*==================================== Question No 3 =========================================
+sort() and comparison funtion
+======================================= Answer =====================================*/
+/* let array = [40,52,110,2000,34]
+console.log(array.sort())
+let ans = array.sort((a,b)=> a - b)
+
+console.log(ans)
+
+let verse = array.sort((a,b)=>b - a);
+console.log(verse) */
+
+
+/*==================================== Question No 4 =========================================
+promise is javascript object that is used to handle asynchronous tasks
+in new Promise paramter we pass an executor function that takes two paramters 
+resolve and reject , after creating an object we call object under and we get 
+response of promise in .then and catch, if promise resolved we get respone in 
+then and if promise reject we get response in catch
+======================================= Answer =====================================*/
+/* const learningPromise = new Promise((resolve,reject)=>{
+    const userInput = prompt('enter any number');
+    if(userInput % 2 === 0)resolve('promise resolved');
+    else reject('promise rejected')
+});
+// console.log(learningPromise)
+learningPromise
+.then((success)=>{console.log('promise success : ',success)})
+.catch((err)=>{console.log('promise err : ',err)})
+ */
+
+
+
+
+/*==================================== Question No 5 =========================================
+real example of using promise
 ======================================= Answer =====================================*/
 
+/* function loginUser(password){
+    console.log(password)
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            if(password == 1234){
+                resolve('user logged in')
+            }
+            else{
+                reject('enter valid password')
+            }
+            
+        }, 1500);
+    })
+
+}
+loginUser(1235)
+.then((msg)=>{
+    console.log(msg)
+})
+.catch((error)=>{
+    console.log(error)
+})
+ */
 
 
 
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 6 =========================================
+'use strict' and 'non strict'
 ======================================= Answer =====================================*/
+  /* "use strict"
+console.log(this)
+function greet(){console.log(this)}
+greet()
+
+
+non-strict by default
+x = 10;
+console.log(x)
+
+x = 10;
+console.log(x)
+function greet(){console.log(this)}
+greet() */
 
 
 
 
 
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 7 =========================================
+this concept
 ======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
+/* let user = {
+    name : 'Aziz',
+    age : 30,
+    info : ()=>{
+        console.log(`my name is ${this.name} and my age is ${this.age}`)
+    }
+}
+user.info()
+ */
 
 
 
