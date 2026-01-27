@@ -135,195 +135,416 @@ user.info()
 
 
 
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 8 =========================================
+api 
+======================================= Answer =====================================*/
+
+/* function api() {
+    const apiUrl = 'https://dummyjson.com/users';
+
+    fetch(apiUrl)
+        .then((success) => success.json())
+        .then((realData) => {
+            show(realData.users);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+api();
+
+function show(data) {
+    let ul = document.getElementById('ul');
+
+    ul.innerHTML = data
+        .map((item) => {
+            return `<li>${item.id} : ${item.firstName} : ${item.lastName}</li>`;
+        })
+        .join('');
+}
+ */
+/*==================================== Question No 9 =========================================
+async await
+======================================= Answer =====================================*/
+ /* let result = document.getElementById('display');
+function showData(showApi){if(Array.isArray(showApi) && showApi.length >0)
+{result.innerHTML = showApi.map((item)=>{return `
+    
+${item.id} ${item.firstName} ${item.lastName}
+`}).join('')}
+}
+
+const showApi = async()=>{const apiUrl = "https://dummyjson.com/users";
+    try{let response = await fetch(apiUrl);
+        let realData = await response.json();
+        console.log(realData);
+        showData(realData.users)
+    }
+    catch(err){console.log('error : ', err);
+        result.innerHTML = `
+Failed to load users
+`
+    }
+}
+showApi()
+ */
+
+
+
+/*==================================== Question No 10 =========================================
+api calling with try catch and async await
+======================================= Answer =====================================*/
+/* const apicalling = async () => {
+    let url = "https://jsonplaceholder.typicode.com/users";
+    try {
+        let getData = await fetch(url);
+        let jsonData = await getData.json();
+        showData(jsonData);
+    } catch (error) {
+        console.log(error);
+    }
+}
+apicalling();
+
+function showData(data) {
+    let result = document.getElementById('display');
+
+    if (Array.isArray(data) && data.length > 0) {
+        result.innerHTML = data.map((item) => {
+            return `<li>${item.id} ${item.name}</li>`;
+        }).join(""); // ⭐ important
+    }
+}
+
+ */
+/*==================================== Question No 11 =========================================
+api calling async await try catch
+======================================= Answer =====================================*/
+ /* async function apicalling() {
+     let url = "https://jsonplaceholder.typicode.com/users";
+     try{
+        let getData = await fetch(url);
+        let jsonData = await getData.json();
+        console.log(jsonData);
+        showData(jsonData)
+     }
+     catch(error){
+        console.log(error)
+     }
+    
+ }
+ apicalling()
+
+ function showData(info)
+ {
+    let result = document.getElementById('display');
+if(Array.isArray(info) && info.length >0){
+   result.innerHTML =  info.map((item)=>{
+        return(`<li>${item.name}   ${item.email}</li>`)
+    }).join("")
+}
+ }
+
+
+ */
+
+/*==================================== Question No 12 =========================================
+The first pillar of oop is object
+======================================= Answer =====================================*/
+ /* let person = {
+  name: 'Aziz',
+  age: 30,
+  greet: function () {
+    return 'hello ' + this.name;
+  }
+}
+
+console.log(person.greet()); 
+             */
+
+
+
+/*==================================== Question No 13 =========================================
+class in oop 
+
+======================================= Answer =====================================*/
+ /* class Student {
+constructor(name,age,designation){this.name = name;
+  this.age = age;
+  this.designation = designation;
+}
+details(){return `My name is ${this.name} and my age is ${this.age} and my designation is ${this.designation}`}
+}
+const newStudent = new Student('Aziz',30,'Designer')
+console.log(newStudent);
+let ans = newStudent.details();
+console.log(ans) */
+
+
+/*==================================== Question No 14 =========================================
+inheritence in oop
+======================================= Answer =====================================*/
+
+  /* class Student {
+  constructor (name){this.name = name;}
+}
+class Student2 extends Student {
+  constructor(name,age){super(name)
+    this.age = age}
+  show(){return `My name is ${this.name} and age is ${this.age}`}
+}
+const result = new Student2('Ahmed',30);
+let ans = result.show();
+console.log(ans) */
+
+
+
+/*==================================== Question No 15 =========================================
+polymorphism 
+same function name but different behaviour depending on object 
+======================================= Answer =====================================*/
+ 
+
+/* class Cars {
+    works(){
+        return(`cars are driving on the roads`)
+    }
+}
+let ans1 = new Cars();
+console.log(ans1.works())
+
+class Boats extends Cars{
+    works(){
+        return (`boats sails on water`)
+    }
+}
+let boats = new Boats();
+console.log(boats.works())
+
+class Kites extends Boats {
+    works(){
+        return(`kites fly in air`)
+    }
+}
+let kites = new Kites();
+console.log(kites.works())
+ */
+/*==================================== Question No 16 =========================================
+encapsulation 
+hiding private data and accessing it by specific method is called encapsultor
 
 ======================================= Answer =====================================*/
 
 
+  /* class BankAccount {
+  #balance = 100;
+  // deposit
+  deposit(amount){if(this.#balance >= 0){ return this.#balance = this.#balance + amount}}
+  // withdraw 
+  withdraw(amount){if(this.#balance > amount){return this.#balance = this.#balance - amount}
+else{return `insufficient balance`}}
+getBalance(){return this.#balance}
 
-/*==================================== Question No 1 =========================================
+}
+const newAccount = new BankAccount();
+let checkBalance = newAccount.deposit(100);
+console.log(checkBalance);
+let checkAfterWithdraw = newAccount.withdraw(800);
+console.log(checkAfterWithdraw);
+let currentBalance = newAccount.getBalance();
+console.log(currentBalance); */
 
+
+
+/*==================================== Question No 17 =========================================
+oop first pillar object
 ======================================= Answer =====================================*/
+/* let obj = {
+    name : 'Aziz',
+    age : 30,
+    details(){
+        return(`My name is ${this.name} and my age is ${this.age}`)
+    }
+}
+console.log(obj.details())
+ */
 
 
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 18 =========================================
+second pillar of oop is class
 ======================================= Answer =====================================*/
+/* class student {
+    
+    constructor(name,age){
+        this.name = name;
+        this.age = age
+    }
+    info(){
+        return(`My name is ${this.name} and my age is ${this.age}`)
+    }
+}
+let newStudent = new student('Aziz',30);
+console.log(newStudent.info())
+ */
 
 
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 19 =========================================
+3pillar inheritance
 ======================================= Answer =====================================*/
+/* class Student {
+    constructor(name){
+        this.name = name
+    }
+}
+class Student2 extends Student {
+    constructor(name,age){
+        super(name);
+        this.age = age
+    }
+    info(){
+        return (` My name is ${this.name} and my age is ${this.age}`)
+    }
+}
+let ans = new Student2('Aziz',30);
+console.log(ans.info()) */
 
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 20 =========================================
+array destructuring
 ======================================= Answer =====================================*/
+/* let fruits = ['apple','mango','banana',['grapes','guava',['lemon','dates']]];
+let [one,two,three,[four,five,[six,seven]]] = fruits;
+console.log(one);
+console.log(three)
+console.log(five);
+console.log(four)
+console.log(seven);
+console.log(six) */
 
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 21 =========================================
+object and nested object destructuring
 ======================================= Answer =====================================*/
+/* let obj = {
+    name : 'Aziz',
+    age : 30,
+    education : {
+        basicEducation :'Bachelor',
+        province : {
+            district : 'Mianwali'
+        }
+    }
+}
+// console.log(obj.education.province.district) 
+
+let {name,education:{basicEducation,province:{district}}} = obj;
+console.log(name);
+console.log(basicEducation)
+console.log(district)
+ */
 
 
 
 
 
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 22 =========================================
+itrator for of is used for accessing element of array and itrator in is used to get 
+the index number of array and in is also used mainly for object
 ======================================= Answer =====================================*/
+/* let arr = ['apple','mango','banana','grapes'];
+for(let item of arr){
+    console.log(item)
+}
+
+for(let index in arr){
+    console.log(index)
+} */
 
 
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 23 =========================================
+itrator in is used for object
 ======================================= Answer =====================================*/
+/* let obj = {
+    name : 'Aziz',
+    age : 30,
+    designation :'developer'
+}
+for(let key in obj){
+    // console.log(key)
+    console.log(`${key} - ${obj[key]}`)
+} */
 
 
 
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 24 =========================================
+reduce js ka aik function jo array k all element ko collect kr k single value mai convert krat,
 ======================================= Answer =====================================*/
+/* let arr = [1,2,3,4,5];
+let ans = arr.reduce((prev,next)=>{
+    return prev + next
+},0)
+console.log(ans) */
 
 
-
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 25 =========================================
+currying function
 ======================================= Answer =====================================*/
+/*  function add(a){
+           return function(b){
+            return function(c){
+                return a + b + c
+            }
+           }
+        }
+        console.log(add(2)(3)(10)) */
+
+      /*  function add(a,b,c,d){
+        return a + b + c + d
+       }
+       console.log(add(2,2,3,4))
+        */
 
 
-
-
-
-/*==================================== Question No 1 =========================================
-https://themewagon.com/themes/free-bootstrap-4-html5-web-developer-portfolio-website-template-satner/
-======================================= Answer =====================================*//*==================================== Question No 1 =========================================
-
+/*==================================== Question No 26 =========================================
+call()
 ======================================= Answer =====================================*/
+/* function greeting(name,age){
+  console.log(`My name is ${name}, and i am ${age} years old and my city is ${this.city}`)
+}
 
+const place = {
+  city: 'Karachi'
+}
 
-
-
-
-/*==================================== Question No 1 =========================================
-
+greeting.call(place,'Aziz',30)
+        */
+       
+/*==================================== Question No  27  =========================================
+apply()
 ======================================= Answer =====================================*/
+/* function info(name,age){
+    console.log(`My name is ${name} and my age is ${age} and my designation is ${this.desigantion}`)
+}
 
+let details = {
+    desigantion : 'developer'
+}
 
+let ans = info.apply(details,['Aziz',22]);
+console.log(ans) */
 
-
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 28 =========================================
+bind()
 ======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
+function greeting(name){
+    console.log(`my name is ${name} and my age is ${this.age}`)
+}
+
+const info = {
+    age : 22
+}
+
+let ans = greeting.bind(info,'Aziz');
+console.log(ans())
 
 /*==================================== Question No 1 =========================================
 
