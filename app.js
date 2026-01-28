@@ -535,7 +535,7 @@ console.log(ans) */
 /*==================================== Question No 28 =========================================
 bind()
 ======================================= Answer =====================================*/
-function greeting(name){
+/* function greeting(name){
     console.log(`my name is ${name} and my age is ${this.age}`)
 }
 
@@ -545,24 +545,58 @@ const info = {
 
 let ans = greeting.bind(info,'Aziz');
 console.log(ans())
-
-/*==================================== Question No 1 =========================================
-
+ */
+/*==================================== Question No 29 =========================================
+abstraction = hide process
 ======================================= Answer =====================================*/
+  
+/* class Car {
+    startCar(){
+        this.#startEngine();
+        console.log('car started')
+    }
+    #startEngine(){
+        console.log('engine is starting')
+    }
+}
+let newCar = new Car();
+console.log(newCar.startCar())
+ */
 
 
 
 
-
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 30 =========================================
+Encapsulation = hiding private data , only accessing by specific method
 ======================================= Answer =====================================*/
+/* class BankAccount {
+    #balance = 100;
+    deposit(amount){
+        if(this.#balance > 0){
+            return this.#balance = this.#balance + amount
+        }
 
+    }
+    // withdraw 
+    withdraw(amount){
+        if(this.#balance > amount){
+            return this.#balance = this.#balance - amount;
+         }
+         else{
+            return 'insufficient balance'
+         }
+    }
+    // checkbalance 
+    checkBalance(){
+        return this.#balance;
+    }
+}
+let result = new BankAccount();
 
-
-
-
-
+console.log(result.deposit(500))
+console.log(result.withdraw(400))
+console.log(result.checkBalance())
+ */
 /*==================================== Question No 1 =========================================
 
 ======================================= Answer =====================================*/
