@@ -597,29 +597,81 @@ console.log(result.deposit(500))
 console.log(result.withdraw(400))
 console.log(result.checkBalance())
  */
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 31 =========================================
+optional chaining
+======================================= Answer =====================================*/
+/* let obj = {
+    name  : 'Aziz',
+    age : 26,
+    address : {
+        city : 'Karachi',
+        education: {
+            basicEducation : 'Bachelor'
+        }
+    }
+}
+console.log(obj.address.education.basicEducation)
+// console.log(obj.address.edu.higheducation);
+console.log(obj?.address?.edu?.highlyEducation)
+ */
+
+/* et user;
+console.log(user?.age)
+let obj = {
+
+}
+console.log(obj.age) */
+
+/* let arr 
+console.log(arr[22])
+ */
+
+
+/*==================================== Question No 32 =========================================
+enhanced object literals
+======================================= Answer =====================================*/
+/* let name = 'Aziz';
+let age = 30;
+let city = 'karachi';
+let obj = {
+    name,
+    age,
+    city
+}
+console.log(name);
+console.log(city) */
+
+
+
+
+/*==================================== Question No 33 =========================================
 
 ======================================= Answer =====================================*/
+const functions = [
+  x => x + 1,
+  x => x * x,
+  x => 2 * x
+];
 
+const x = 4;
 
+var compose = function(functions) {
+    return function(x) {
+        let result = x;
 
+        for (let i = functions.length - 1; i >= 0; i--) {
+            result = functions[i](result);
+        }
 
+        return result;
+    };
+};
 
+// Step 1: function banao
+const composedFunction = compose(functions);
 
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
+// Step 2: number pass karo
+console.log(composedFunction(x));
 
 
 
