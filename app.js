@@ -645,33 +645,33 @@ console.log(city) */
 
 
 /*==================================== Question No 33 =========================================
-
+composition function
 ======================================= Answer =====================================*/
-const functions = [
-  x => x + 1,
-  x => x * x,
-  x => 2 * x
-];
+// const functions = [
+//   x => x + 1,
+//   x => x * x,
+//   x => 2 * x
+// ];
 
-const x = 4;
+// const x = 4;
 
-var compose = function(functions) {
-    return function(x) {
-        let result = x;
+// var compose = function(functions) {
+//     return function(x) {
+//         let result = x;
 
-        for (let i = functions.length - 1; i >= 0; i--) {
-            result = functions[i](result);
-        }
+//         for (let i = functions.length - 1; i >= 0; i--) {
+//             result = functions[i](result);
+//         }
 
-        return result;
-    };
-};
+//         return result;
+//     };
+// };
 
-// Step 1: function banao
-const composedFunction = compose(functions);
+// // Step 1: function banao
+// const composedFunction = compose(functions);
 
-// Step 2: number pass karo
-console.log(composedFunction(x));
+// // Step 2: number pass karo
+// console.log(composedFunction(x));
 
 
 
@@ -681,8 +681,11 @@ console.log(composedFunction(x));
 /*==================================== Question No 1 =========================================
 
 ======================================= Answer =====================================*/
-
-
+function abc(...rest){
+    console.log(rest.length)
+}
+   
+abc('Aziz',23,'kci')
 
 
 
